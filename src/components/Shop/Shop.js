@@ -45,7 +45,7 @@ const Shop = () => {
 				</div>
 				<button className="cart-view-btn">
 					<FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-					<span className="cart-item">895</span>
+					<span className="cart-item">{cart.length}</span>
 				</button>
 			</div>
 
