@@ -1,13 +1,82 @@
-body {
+:root {
+  --clr-primary-hsl: 36, 100%, 50%;
+  --clr-primary-hs: 36, 100%;
+  --clr-dark-hsl: 220, 13%, 18%;
+  --clr-dark-hs: 220, 13%;
+  --clr-light-hsl: 0, 0%, 94%;
+  --clr-light-hs: 0, 0%;
+}
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  background-color: hsl(var(--clr-light-hsl));
+  color: hsl(var(--clr-dark-hs), 50%);
+  line-height: 1.5;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(var(--clr-dark-hsl));
+  font-weight: 600;
+  line-height: 1.2;
+}
+a, button {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+ul, ol {
+  padding-left: 30px;
+}
+table {
+  width: 100%;
+  border: 1px solid hsl(var(--clr-dark-hsl));
+}
+table, th, td {
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid hsl(var(--clr-dark-hs), 60%);
+}
+/**
+* Custom Scrollbar Style
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 11px;
+  background: #F5F5F5;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--clr-primary-hs), 65%);
+  border-radius: 5px;
+  border: 0.5px solid hsl(var(--clr-primary-hsl));
+  transition: all 0.3s ease;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0A6DAD;
 }
